@@ -24,27 +24,27 @@ public class TeaController {
         return "delete tea"+id;
     }
 
-    @ApiOperation(value = "修改tea的接口")
+    @ApiOperation(value = "修改tea的接口", notes = "修改指定tea的信息")
     @PutMapping(value = "/{id}")
     public String put(@PathVariable String id){
         return "put tea"+id;
     }
 
-    @ApiOperation(value = "查询tea的接口")
+    @ApiOperation(value = "查询tea的接口", notes = "根据id获取指定tea的路由信息")
     @ApiImplicitParam(paramType = "path", name = "id", value = "tea的ID", required = true, dataType = "string")
     @GetMapping(value = "/{id}")
     public String get(@PathVariable String id){
         return "get tea"+id;
     }
 
-    @ApiOperation("搜索tea的接口")
+    @ApiOperation(value = "搜索tea的接口", notes = "根据条件查询tea的信息")
     @ApiImplicitParam(name = "teaRoutQueryForm", value = "tea查询参数", required = true, dataType = "TeaRouteQueryForm")
     @PostMapping(value = "/conditions")
     public String search(){
         return "search tea";
     }
 
-    @ApiOperation(value = "查询所有tea的接口")
+    @ApiOperation(value = "查询所有tea的接口", notes = "查询所有tea的信息")
     @GetMapping("/all")
     String post(){
         return  "欢迎来到tea微服务模块tea!!!";
