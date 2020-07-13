@@ -1,0 +1,10 @@
+server:
+  port: 3010
+spring:
+  application:
+    name: tea
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.115:8848   #注册nacos
+        namespace: spring-cloud-scaffolding
